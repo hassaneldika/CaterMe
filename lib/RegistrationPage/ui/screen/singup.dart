@@ -1,0 +1,282 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, unnecessary_import, depend_on_referenced_packages
+
+import 'dart:ui';
+
+import 'package:caterme/HomePage/ui/screen/home.dart';
+import 'package:caterme/RegistrationPage/ui/screen/login.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Singup(),
+    );
+  }
+}
+
+class Singup extends StatefulWidget {
+  const Singup({Key? key}) : super(key: key);
+
+  @override
+  State<Singup> createState() => _SingupState();
+}
+
+class _SingupState extends State<Singup> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xff3E5521),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back),
+          ),
+          title: Text('Sign up'),
+          centerTitle: true,
+        ),
+        backgroundColor: Color(0xfff3f3f3),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.only(left: 40, right: 40, top: 90, bottom: 80),
+            child: Column(
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.only(
+                    left: 42,
+                  ),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Center(
+                    child: TextField(
+                      keyboardType: TextInputType.name,
+                      style: TextStyle(color: Colors.black, fontSize: 11),
+                      decoration: InputDecoration(
+                        hintText: 'Name',
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Center(
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      style: TextStyle(color: Colors.black, fontSize: 11),
+                      decoration: InputDecoration(
+                        hintText: 'Email',
+                        border: InputBorder.none,
+                        prefixIcon: Icon(
+                          Icons.email_outlined,
+                          color: Colors.grey,
+                          size: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Center(
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      style: TextStyle(color: Colors.black, fontSize: 11),
+                      decoration: InputDecoration(
+                        hintText: 'Password',
+                        border: InputBorder.none,
+                        prefixIcon: Icon(
+                          Icons.lock_outline,
+                          color: Colors.grey,
+                          size: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Center(
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      style: TextStyle(color: Colors.black, fontSize: 11),
+                      decoration: InputDecoration(
+                        hintText: 'Confirm password',
+                        border: InputBorder.none,
+                        prefixIcon: Icon(
+                          Icons.lock_outline,
+                          color: Colors.grey,
+                          size: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Center(
+                    child: TextField(
+                      keyboardType: TextInputType.phone,
+                      style: TextStyle(color: Colors.black, fontSize: 11),
+                      decoration: InputDecoration(
+                        hintText: 'Phone',
+                        border: InputBorder.none,
+                        prefixIcon: Icon(
+                          Icons.phone,
+                          color: Colors.grey,
+                          size: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.only(left: 15, right: 15),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      Text(
+                        'Gender',
+                        style: TextStyle(color: Colors.grey, fontSize: 11),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.keyboard_arrow_down_outlined,
+                          color: Colors.grey,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.only(left: 15, right: 15),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      Text(
+                        'Birthday',
+                        style: TextStyle(color: Colors.grey, fontSize: 11),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.keyboard_arrow_down_outlined,
+                          color: Colors.grey,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40, right: 40),
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xff3E5521)),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Home()));
+                      },
+                      child: Text(
+                        'Sign up',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Text(
+                        'Already have an account?',
+                        style: TextStyle(fontSize: 11),
+                      ),
+                    ),
+                    Container(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Login()));
+                        },
+                        child: Text(
+                          ' Login',
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ));
+  }
+}
