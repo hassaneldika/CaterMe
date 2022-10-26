@@ -53,68 +53,80 @@ class _PaymentState extends State<Payment> {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(0),
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              height: MediaQuery.of(context).size.height * 0.15,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Color(0xfff3f3f3),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(30),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 15),
-                      child: Container(
-                        height: MediaQuery.of(context).size.height * 0.08,
-                        width: MediaQuery.of(context).size.width * 0.1,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                'assets/images/NoPath - Copy (12).png'),
-                            fit: BoxFit.fill,
-                          ),
+            Padding(
+                padding: EdgeInsets.only(top: 20, right: 15),
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 10, left: 10),
+                        child: Image.asset(
+                          width: 40,
+                          height: 40,
+                          "assets/images/NoPath - Copy (12).png",
+                          fit: BoxFit.fill,
                         ),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        Text('**** **** **** ', style: TextStyle(fontSize: 10),),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: Text('2187' , style: TextStyle(fontSize: 10),),
-                        )
-                      ],
-                    ),
-                    Spacer(),
-                    Row(
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.08,
-                          width: MediaQuery.of(context).size.width * 0.1,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.red),
-                          ),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                InkWell(
+                      Container(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 7),
+                              child: Text(
+                                '**** **** ****',
+                                style:
+                                    TextStyle(fontSize: 10, color: Colors.grey),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                '2187',
+                                style:
+                                    TextStyle(fontSize: 10, color: Colors.grey),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Spacer(),
+                      Row(
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(10.0),
+                                decoration: BoxDecoration(
+                                  border: Border.all(width: 1.0, color: Colors.red,),
+                                  borderRadius: BorderRadius.all(
+                                      Radius.circular(
+                                          12.0)
+                                      ),
+                                ),
+                                child: GestureDetector(
+                                  child: Text(
+                                    'Delete Card',
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      color: Colors.red,
+                                    ),
+                                  ),
                                   onTap: () {},
-                                  child: Text('Delete Card' , style: TextStyle(fontSize: 10),),
-                                )
-                              ]),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                )),
           ],
         ),
       ),
