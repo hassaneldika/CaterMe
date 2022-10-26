@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 
@@ -67,7 +67,7 @@ class _OrdersState extends State<Orders> {
                       padding: const EdgeInsets.only(left: 10),
                       child: Text(
                         'Breakfast',
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 10, color: Colors.grey),
                       ),
                     ),
                   ],
@@ -97,7 +97,7 @@ class _OrdersState extends State<Orders> {
                       padding: const EdgeInsets.only(left: 10),
                       child: Text(
                         'Dinner',
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 10, color: Colors.grey),
                       ),
                     ),
                   ],
@@ -127,7 +127,7 @@ class _OrdersState extends State<Orders> {
                       padding: const EdgeInsets.only(left: 10),
                       child: Text(
                         'Birthday party',
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 10, color: Colors.grey),
                       ),
                     ),
                   ],

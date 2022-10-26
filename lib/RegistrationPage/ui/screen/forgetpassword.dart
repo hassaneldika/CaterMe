@@ -49,27 +49,34 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10), color: Colors.white),
-              child: Center(
-                child: TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    border: InputBorder.none,
-                    prefixIcon: Icon(
-                      Icons.email_outlined,
-                      color: Colors.grey,
-                      size: 15,
+              
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    style: TextStyle(color: Colors.black),
+                    decoration: InputDecoration(
+                      hintText: 'Email',
+                      border: InputBorder.none,
+                      prefixIcon: Icon(
+                        Icons.email_outlined,
+                        color: Colors.grey,
+                        size: 15,
+                      ),
+                       prefixIconConstraints: BoxConstraints(
+                          minWidth: 25,
+                          minHeight: 25,
+                        ),
                     ),
                   ),
                 ),
-              ),
+            
             ),
             SizedBox(
               height: 30,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.only(left: 10, right: 10),
               child: Container(
                 alignment: Alignment.center,
                 height: MediaQuery.of(context).size.height * 0.08,
@@ -81,7 +88,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   onTap: () {},
                   child: Text(
                     'Reset password',
-                    style: TextStyle(color: Colors.white, fontSize: 10),
+                    style: TextStyle(color: Colors.white, fontSize: 12),
                   ),
                 ),
               ),

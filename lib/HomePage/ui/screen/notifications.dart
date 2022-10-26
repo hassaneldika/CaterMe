@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -53,7 +53,7 @@ class _NotificationsState extends State<Notifications> {
               child: Column(
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.06,
+                    height: MediaQuery.of(context).size.height * 0.07,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       children: [
@@ -65,22 +65,25 @@ class _NotificationsState extends State<Notifications> {
                             size: 12,
                           ),
                         ),
-                        Container(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Your order has been accepted',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black),
-                              ),
-                              SizedBox(height: 7,),
-                              Text(
-                                'Now',
-                                style:
-                                    TextStyle(fontSize: 10, color: Colors.grey),
-                              ),
-                            ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 7),
+                          child: Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Your order has been accepted',
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.black),
+                                ),
+                                SizedBox(height: 3,),
+                                Text(
+                                  'Now',
+                                  style:
+                                      TextStyle(fontSize: 10, color: Colors.grey),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -99,10 +102,10 @@ class _NotificationsState extends State<Notifications> {
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 15,
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.06,
+                    height: MediaQuery.of(context).size.height * 0.07,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       children: [
@@ -114,22 +117,25 @@ class _NotificationsState extends State<Notifications> {
                             size: 12,
                           ),
                         ),
-                        Container(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Your order has been delivered',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black),
-                              ),
-                              SizedBox(height: 7,),
-                              Text(
-                                '1 hr ago',
-                                style:
-                                    TextStyle(fontSize: 10, color: Colors.grey),
-                              ),
-                            ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 7),
+                          child: Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Your order has been delivered',
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.black),
+                                ),
+                                SizedBox(height: 3,),
+                                Text(
+                                  '1 hr ago',
+                                  style:
+                                      TextStyle(fontSize: 10, color: Colors.grey),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -148,10 +154,10 @@ class _NotificationsState extends State<Notifications> {
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 15,
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.06,
+                    height: MediaQuery.of(context).size.height * 0.07,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       children: [
@@ -163,22 +169,25 @@ class _NotificationsState extends State<Notifications> {
                             size: 12,
                           ),
                         ),
-                        Container(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Your order has been delivered',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black),
-                              ),
-                              SizedBox(height: 7,),
-                              Text(
-                                '1 hr ago',
-                                style:
-                                    TextStyle(fontSize: 10, color: Colors.grey),
-                              ),
-                            ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 7),
+                          child: Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Your order has been delivered',
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.black),
+                                ),
+                                SizedBox(height: 3,),
+                                Text(
+                                  '1 hr ago',
+                                  style:
+                                      TextStyle(fontSize: 10, color: Colors.grey),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -196,9 +205,9 @@ class _NotificationsState extends State<Notifications> {
                       color: Color.fromARGB(255, 209, 204, 204),
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 15,),
                    Container(
-                    height: MediaQuery.of(context).size.height * 0.06,
+                    height: MediaQuery.of(context).size.height * 0.07,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       children: [
@@ -210,22 +219,25 @@ class _NotificationsState extends State<Notifications> {
                             size: 12,
                           ),
                         ),
-                        Container(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Your order has been delivered',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black),
-                              ),
-                              SizedBox(height: 7,),
-                              Text(
-                                '1 hr ago',
-                                style:
-                                    TextStyle(fontSize: 10, color: Colors.grey),
-                              ),
-                            ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 7),
+                          child: Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Your order has been delivered',
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.black),
+                                ),
+                                SizedBox(height: 3,),
+                                Text(
+                                  '1 hr ago',
+                                  style:
+                                      TextStyle(fontSize: 10, color: Colors.grey),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],

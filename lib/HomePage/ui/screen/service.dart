@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:caterme/HomePage/ui/screen/home.dart';
+import 'package:caterme/HomePage/ui/screen/payment.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -105,29 +106,32 @@ class _OrderState extends State<Order> {
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Container(
-                  padding: EdgeInsets.only(
-                    left: 10,
-                  ),
-                  height: MediaQuery.of(context).size.height * 0.1,
+                  height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
+                      color: Color(0xfff3f3f3),
+                      ),
                   child: Center(
-                    child: TextField(
-                      keyboardType: TextInputType.text,
+                      child: TextField(
+                        keyboardType: TextInputType.text,
                       style: TextStyle(
                         color: Colors.black,
                          fontSize: 10,
                       ),
-                      decoration: InputDecoration(
-                        hintText: 'Title of occasion.',
-                        border: InputBorder.none,
-                      ),
-                    ),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+               hintText: 'Title of occasion.',
+                enabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(width: 1, color: Colors.grey),
+                ),
+                
+                ),
+          ),
+        ),
                   ),
                 ),
-              ),
+              
               SizedBox(
                 height: 20,
               ),
@@ -238,7 +242,7 @@ class _OrderState extends State<Order> {
                           child: Container(
                             padding: EdgeInsets.only(top: 4),
                             height: 30,
-                        width: 80,
+                            width: 80,
                             decoration: BoxDecoration(
                                 border:
                                     Border.all(width: 1, color: Colors.grey),
@@ -720,23 +724,27 @@ class _OrderState extends State<Order> {
                 height: 30,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 40, right: 40),
-                child: Container(
-                  alignment: Alignment.center,
-                  height: MediaQuery.of(context).size.height * 0.1,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Color(0xff3E5521),
-                  ),
-                  child: Text(
-                    'Checkout',
-                    style: TextStyle(color: Colors.white),
-                    textAlign: TextAlign.center,
+                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height * 0.1,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xff3E5521)),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Payment()));
+                      },
+                      child: Text(
+                        'Checkout',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ],
+          ],
           ),
         ),
       ),

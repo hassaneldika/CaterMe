@@ -30,10 +30,10 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xfff3f3f3),
+        backgroundColor: Color.fromARGB(255, 235, 232, 232),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+            padding: const EdgeInsets.only(left: 20, right: 20, bottom: 40),
             child: Column(
               children: <Widget>[
                 Container(
@@ -60,7 +60,10 @@ class _LoginState extends State<Login> {
                         fontSize: 15,
                       ),
                       decoration: InputDecoration(
+                        fillColor: Color.fromARGB(255, 255, 255, 255),
+                         filled: true,
                         hintText: 'Email',
+                        hintStyle: TextStyle(color: Colors.grey),
                         border: InputBorder.none,
                         prefixIcon: Icon(
                           Icons.email_outlined,
@@ -84,7 +87,10 @@ class _LoginState extends State<Login> {
                       keyboardType: TextInputType.emailAddress,
                       style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
+                         fillColor: Color.fromARGB(255, 255, 255, 255),
+                         filled: true,
                         hintText: 'Password',
+                        hintStyle: TextStyle(color: Colors.grey),
                         border: InputBorder.none,
                         prefixIcon: Icon(
                           Icons.lock_outline,
@@ -107,7 +113,7 @@ class _LoginState extends State<Login> {
                               builder: (context) => ForgetPassword()));
                     },
                     child: Text(
-                      'Forget password?',
+                      'Forget Password?',
                       style: TextStyle(fontSize: 10),
                     ),
                   ),
@@ -116,7 +122,7 @@ class _LoginState extends State<Login> {
                   height: 40,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  padding: const EdgeInsets.only(left: 10, right: 10),
                   child: Container(
                     alignment: Alignment.center,
                     height: MediaQuery.of(context).size.height * 0.1,
@@ -146,7 +152,7 @@ class _LoginState extends State<Login> {
                           MaterialPageRoute(builder: (context) => Singup()));
                     },
                     child: Text(
-                      'Create new account',
+                      'Create New Account',
                       style: TextStyle(fontSize: 11),
                     ),
                   ),

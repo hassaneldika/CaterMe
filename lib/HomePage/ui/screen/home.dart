@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, depend_on_referenced_packages, unused_import, avoid_unnecessary_containers, duplicate_import, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, duplicate_ignore
 
-import 'package:caterme/HomePage/ui/screen/order.dart';
+import 'package:caterme/HomePage/ui/screen/service.dart';
 import 'package:caterme/HomePage/ui/screen/profile.dart';
 import 'package:caterme/HomePage/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
@@ -67,8 +67,8 @@ class _HomeState extends State<Home> {
                       Row(
                         children: [
                           Container(
-                            height: MediaQuery.of(context).size.height * 0.3,
-                            width: MediaQuery.of(context).size.width * 0.3,
+                            height: MediaQuery.of(context).size.height * 0.2,
+                            width: MediaQuery.of(context).size.width * 0.2,
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage(
@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 30,
             ),
             Padding(
               padding: EdgeInsets.only(left: 20, right: 20),
@@ -105,7 +105,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 40,
             ),
             Padding(
               padding: EdgeInsets.only(left: 20, right: 20),

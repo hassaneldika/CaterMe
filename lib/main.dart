@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'CaterMe',
+      title: 'Cater Me',
       theme: ThemeData(primaryColor: Colors.white),
       home: SplashScreen(),
     );

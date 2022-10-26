@@ -66,7 +66,7 @@ class _AddressesState extends State<Addresses> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.05,
+                    height: MediaQuery.of(context).size.height * 0.08,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       // ignore: prefer_const_literals_to_create_immutables
@@ -82,42 +82,56 @@ class _AddressesState extends State<Addresses> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'Home',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 6),
+                                child: Text(
+                                  'Home',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black),
+                                ),
                               ),
                               Text(
                                 'Street, building, apartment',
                                 style:
-                                    TextStyle(fontSize: 10, color: Colors.grey),
+                                    TextStyle(fontSize: 6.5, color: Colors.grey),
                               ),
                             ],
                           ),
                         ),
                         Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Container(
+                        Row(
+                        children: [
+                          Container(
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 10),
-                                  child: Icon(
-                                    Icons.edit,
-                                    color: Color(0xff3E5521),
+                                  padding: const EdgeInsets.only(right: 7),
+                                  child: InkWell(
+                                    onTap: () {},
+                                    child: Icon(Icons.edit, color: Color(0xff3E5521),),
                                   ),
-                                ),
-                                Text(
-                                  'Delete',
-                                  style: TextStyle(
-                                      fontSize: 10, color: Colors.red),
-                                ),
+                                )
                               ],
                             ),
                           ),
-                        )
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: Row(
+                              children: [
+                                GestureDetector(
+                                  child: Text(
+                                    'Delete',
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.red),
+                                  ),
+                                  onTap: () {
+                                  },
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                       ],
                     ),
                   ),
@@ -126,7 +140,7 @@ class _AddressesState extends State<Addresses> {
                   height: 8,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: 18, left: 16),
+                  padding: EdgeInsets.only(right: 10, left: 16),
                   child: Divider(
                     height: 1,
                     indent: 1,
@@ -134,10 +148,11 @@ class _AddressesState extends State<Addresses> {
                     color: Colors.grey,
                   ),
                 ),
+                SizedBox(height: 5,),
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.05,
+                    height: MediaQuery.of(context).size.height * 0.08,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       // ignore: prefer_const_literals_to_create_immutables
@@ -153,49 +168,63 @@ class _AddressesState extends State<Addresses> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'Home',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 6),
+                                child: Text(
+                                  'Home',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black),
+                                ),
                               ),
                               Text(
                                 'Street, building, apartment',
                                 style:
-                                    TextStyle(fontSize: 10, color: Colors.grey),
+                                    TextStyle(fontSize: 6.5, color: Colors.grey),
                               ),
                             ],
                           ),
                          ),
                          Spacer(),
-                         Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Container(
+                         Row(
+                        children: [
+                          Container(
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 10),
-                                  child: Icon(
-                                    Icons.edit,
-                                    color: Color(0xff3E5521),
+                                  padding: const EdgeInsets.only(right: 7),
+                                  child: InkWell(
+                                    onTap: () {},
+                                    child: Icon(Icons.edit, color: Color(0xff3E5521),),
                                   ),
-                                ),
-                                Text(
-                                  'Delete',
-                                  style: TextStyle(
-                                      fontSize: 10, color: Colors.red),
-                                ),
+                                )
                               ],
                             ),
                           ),
-                        )
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: Row(
+                              children: [
+                                GestureDetector(
+                                  child: Text(
+                                    'Delete',
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.red),
+                                  ),
+                                  onTap: () {
+                                  },
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                       ],
                     ),
                   ),
                  ),
                  SizedBox(height: 8,),
                  Padding(
-                  padding: EdgeInsets.only(right: 18, left: 16),
+                  padding: EdgeInsets.only(right: 10, left: 16),
                   child: Divider(
                     height: 1,
                     indent: 1,
@@ -206,7 +235,7 @@ class _AddressesState extends State<Addresses> {
                  InkWell(
                   onTap: () {},
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.05,
+                    height: MediaQuery.of(context).size.height * 0.08,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       // ignore: prefer_const_literals_to_create_immutables
@@ -222,49 +251,63 @@ class _AddressesState extends State<Addresses> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'Home',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 6),
+                                child: Text(
+                                  'Home',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black),
+                                ),
                               ),
                               Text(
                                 'Street, building, apartment',
                                 style:
-                                    TextStyle(fontSize: 10, color: Colors.grey),
+                                    TextStyle(fontSize: 6.5, color: Colors.grey),
                               ),
                             ],
                           ),
                         ),
                         Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Container(
+                        Row(
+                        children: [
+                          Container(
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 10),
-                                  child: Icon(
-                                    Icons.edit,
-                                    color: Color(0xff3E5521),
+                                  padding: const EdgeInsets.only(right: 7),
+                                  child: InkWell(
+                                    onTap: () {},
+                                    child: Icon(Icons.edit, color: Color(0xff3E5521)),
                                   ),
-                                ),
-                                Text(
-                                  'Delete',
-                                  style: TextStyle(
-                                      fontSize: 10, color: Colors.red),
-                                ),
+                                )
                               ],
                             ),
                           ),
-                        )
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: Row(
+                              children: [
+                                GestureDetector(
+                                  child: Text(
+                                    'Delete',
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.red),
+                                  ),
+                                  onTap: () {
+                                  },
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                       ],
                     ),
                   ),
                 ),
                 SizedBox(height: 8,),
                 Padding(
-                  padding: EdgeInsets.only(right: 18, left: 16),
+                  padding: EdgeInsets.only(right: 10, left: 16),
                   child: Divider(
                     height: 1,
                     indent: 1,
@@ -272,11 +315,11 @@ class _AddressesState extends State<Addresses> {
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(height: 8,),
+                SizedBox(height: 5,),
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.05,
+                    height: MediaQuery.of(context).size.height * 0.08,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       // ignore: prefer_const_literals_to_create_immutables
@@ -292,42 +335,56 @@ class _AddressesState extends State<Addresses> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'Home',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 6),
+                                child: Text(
+                                  'Home',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black),
+                                ),
                               ),
                               Text(
                                 'Street, building, apartment',
                                 style:
-                                    TextStyle(fontSize: 10, color: Colors.grey),
+                                    TextStyle(fontSize: 6.5, color: Colors.grey),
                               ),
                             ],
                           ),
                         ),
                         Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Container(
+                        Row(
+                        children: [
+                          Container(
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 10),
-                                  child: Icon(
-                                    Icons.edit,
-                                    color: Color(0xff3E5521),
+                                  padding: const EdgeInsets.only(right: 7),
+                                  child: InkWell(
+                                    onTap: () {},
+                                    child: Icon(Icons.edit, color: Color(0xff3E5521)),
                                   ),
-                                ),
-                                Text(
-                                  'Delete',
-                                  style: TextStyle(
-                                      fontSize: 10, color: Colors.red),
-                                ),
+                                )
                               ],
                             ),
                           ),
-                        )
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: Row(
+                              children: [
+                                GestureDetector(
+                                  child: Text(
+                                    'Delete',
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.red),
+                                  ),
+                                  onTap: () {
+                                  },
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                       ],
                     ),
                   ),

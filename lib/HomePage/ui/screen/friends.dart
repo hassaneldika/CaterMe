@@ -75,11 +75,11 @@ class _FriendsState extends State<Friends> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 20),
-                      child: Icon(Icons.person_outline_rounded),
+                      child: Icon(Icons.person_outline_rounded, color: Colors.grey),
                     ),
                     Text(
                       'Walid Taktak',
-                      style: TextStyle(fontSize: 10),
+                      style: TextStyle(fontSize: 10, color: Colors.grey),
                     ),
                   ],
                 ),
@@ -106,11 +106,11 @@ class _FriendsState extends State<Friends> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 20),
-                      child: Icon(Icons.person_outline_rounded),
+                      child: Icon(Icons.person_outline_rounded, color: Colors.grey),
                     ),
                     Text(
                       'Walid Taktak',
-                      style: TextStyle(fontSize: 10),
+                      style: TextStyle(fontSize: 10, color: Colors.grey),
                     ),
                   ],
                 ),
@@ -137,11 +137,11 @@ class _FriendsState extends State<Friends> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 20),
-                      child: Icon(Icons.person_outline_rounded),
+                      child: Icon(Icons.person_outline_rounded, color: Colors.grey),
                     ),
                     Text(
                       'Walid Taktak',
-                      style: TextStyle(fontSize: 10),
+                      style: TextStyle(fontSize: 10, color: Colors.grey),
                     ),
                   ],
                 ),

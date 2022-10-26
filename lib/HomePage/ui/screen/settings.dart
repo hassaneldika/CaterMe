@@ -1,11 +1,12 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_import
 
-import 'dart:html';
+
 import 'dart:ui';
 
 import 'package:caterme/HomePage/ui/screen/addresses.dart';
 import 'package:caterme/HomePage/ui/screen/friends.dart';
 import 'package:caterme/HomePage/ui/screen/notifications.dart';
+import 'package:caterme/HomePage/ui/screen/occasion.dart';
 import 'package:caterme/HomePage/ui/screen/orders.dart';
 import 'package:caterme/HomePage/ui/screen/payment.dart';
 import 'package:caterme/HomePage/ui/screen/profile.dart';
@@ -55,7 +56,8 @@ class _SettingsState extends State<Settings> {
                 height: 15,
               ),
               Padding(
-                padding: EdgeInsets.all(25),
+                padding:
+                    EdgeInsets.only(top: 25, right: 15, bottom: 25, left: 15),
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.12,
                   width: MediaQuery.of(context).size.width,
@@ -81,7 +83,7 @@ class _SettingsState extends State<Settings> {
                                     ));
                               },
                               child: Container(
-                                width: MediaQuery.of(context).size.width * 0.09,
+                                width: MediaQuery.of(context).size.width * 0.15,
                                 height:
                                     MediaQuery.of(context).size.height * 0.07,
                                 decoration: BoxDecoration(
@@ -96,7 +98,7 @@ class _SettingsState extends State<Settings> {
                             ),
                             Text(
                               'Notification',
-                              style: TextStyle(fontSize: 10),
+                              style: TextStyle(fontSize: 7),
                             ),
                           ],
                         ),
@@ -114,7 +116,7 @@ class _SettingsState extends State<Settings> {
                                     ));
                               },
                               child: Container(
-                                width: MediaQuery.of(context).size.width * 0.09,
+                                width: MediaQuery.of(context).size.width * 0.15,
                                 height:
                                     MediaQuery.of(context).size.height * 0.07,
                                 decoration: BoxDecoration(
@@ -129,7 +131,40 @@ class _SettingsState extends State<Settings> {
                             ),
                             Text(
                               'Orders',
-                              style: TextStyle(fontSize: 10),
+                              style: TextStyle(fontSize: 7),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            SizedBox(
+                              height: 7,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => Occasion(),
+                                    ));
+                              },
+                              child: Container(
+                                width: MediaQuery.of(context).size.width * 0.15,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.07,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Color(0xfff3f3f3),
+                                ),
+                                child: Icon(Icons.notifications_outlined),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 3,
+                            ),
+                            Text(
+                              'Occasions',
+                              style: TextStyle(fontSize: 7),
                             ),
                           ],
                         ),
@@ -141,14 +176,14 @@ class _SettingsState extends State<Settings> {
                             InkWell(
                               onTap: () {},
                               child: Container(
-                                width: MediaQuery.of(context).size.width * 0.09,
+                                width: MediaQuery.of(context).size.width * 0.15,
                                 height:
                                     MediaQuery.of(context).size.height * 0.07,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Color(0xfff3f3f3),
                                 ),
-                                child: Icon(Icons.calendar_today_outlined),
+                                child: Icon(Icons.contact_support_outlined),
                               ),
                             ),
                             SizedBox(
@@ -156,7 +191,7 @@ class _SettingsState extends State<Settings> {
                             ),
                             Text(
                               'Support',
-                              style: TextStyle(fontSize: 10),
+                              style: TextStyle(fontSize: 7),
                             ),
                           ],
                         )
@@ -166,7 +201,7 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 25, right: 25),
+                padding: EdgeInsets.only(left: 15, right: 15),
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.9,
                   width: MediaQuery.of(context).size.width,
@@ -197,7 +232,6 @@ class _SettingsState extends State<Settings> {
                                 'Profile',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
@@ -234,7 +268,6 @@ class _SettingsState extends State<Settings> {
                                 'Addresses',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
@@ -272,7 +305,6 @@ class _SettingsState extends State<Settings> {
                                 'Friends',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
@@ -310,7 +342,6 @@ class _SettingsState extends State<Settings> {
                                 'Payment method',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
@@ -342,7 +373,6 @@ class _SettingsState extends State<Settings> {
                                 'Language',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
@@ -374,7 +404,6 @@ class _SettingsState extends State<Settings> {
                                 'Mode',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
@@ -406,7 +435,6 @@ class _SettingsState extends State<Settings> {
                                 'Terms',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
@@ -438,7 +466,6 @@ class _SettingsState extends State<Settings> {
                                 'Contact us',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
@@ -450,10 +477,10 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 20,
               ),
               Padding(
-                padding: EdgeInsets.only(right: 25, left: 25),
+                padding: EdgeInsets.only(right: 15, left: 15),
                 child: InkWell(
                   onTap: () {},
                   child: Container(
@@ -472,7 +499,7 @@ class _SettingsState extends State<Settings> {
                         ),
                         Text(
                           'Sign out',
-                          style: TextStyle(fontSize: 20, color: Colors.red),
+                          style: TextStyle(fontSize: 17, color: Colors.red),
                         ),
                       ],
                     ),
