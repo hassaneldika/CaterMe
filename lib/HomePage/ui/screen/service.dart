@@ -36,7 +36,7 @@ class _OrderState extends State<Order> {
       backgroundColor: Color(0xfff3f3f3),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 50),
+          padding: EdgeInsets.only(left: 10, right: 10, top: 40, bottom: 50),
           child: Column(
             children: [
               Container(

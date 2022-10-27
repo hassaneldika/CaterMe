@@ -5,7 +5,7 @@ import 'package:caterme/HomePage/ui/screen/profile.dart';
 import 'package:caterme/HomePage/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,6 +30,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final List<String> imageList = [
+    'assets/images/NoPath - Copy (25).png',
+    'assets/images/NoPath - Copy (25).png',
+    'assets/images/NoPath - Copy (25).png',
+    'assets/images/NoPath - Copy (25).png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,11 +103,30 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(left: 20, right: 20),
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.4,
-                width: MediaQuery.of(context).size.width,
-                child: Image.asset(
-                  "assets/images/NoPath - Copy (25).png",
-                  fit: BoxFit.fill,
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    enlargeCenterPage: true,
+                    enableInfiniteScroll: false,
+                    autoPlay: true,
+                    viewportFraction: 1,
+                  ),
+                  items: imageList
+                      .map((e) => ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Stack(
+                              fit: StackFit.expand,
+                              children: <Widget>[
+                                Image.asset(
+                                  e,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.4,
+                                  width: MediaQuery.of(context).size.width,
+                                  fit: BoxFit.cover,
+                                )
+                              ],
+                            ),
+                          ))
+                      .toList(),
                 ),
               ),
             ),
@@ -143,9 +169,68 @@ class _HomeState extends State<Home> {
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.3,
                 width: MediaQuery.of(context).size.width,
-                child: Image.asset(
-                  "assets/images/Scroll Group 10.png",
-                  fit: BoxFit.fill,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.80,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image:
+                                AssetImage('assets/images/Repeat Grid 1.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.bottomRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(bottom: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.80,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image:
+                                AssetImage('assets/images/Repeat Grid 1.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -176,200 +261,306 @@ class _HomeState extends State<Home> {
               ]),
             ),
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 20,
-                right: 20,
+                left: 10,
+                right: 10,
               ),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.2,
                 width: MediaQuery.of(context).size.width,
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height * 0.25,
-                            width: MediaQuery.of(context).size.width * 0.25,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/uuvVgrDn1uzTT6x3HCRjShawarma Station.png'),
-                                fit: BoxFit.fill,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.30,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/uuvVgrDn1uzTT6x3HCRjShawarma Station.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.25,
-                            height: MediaQuery.of(context).size.height * 0.25,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/iig5kU0ixOXfONnrzo5aoffers with patternsquare only [Recovered]-15.png'),
-                                fit: BoxFit.fill,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.30,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/iig5kU0ixOXfONnrzo5aoffers with patternsquare only [Recovered]-15.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.25,
-                            height: MediaQuery.of(context).size.height * 0.25,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/nHW6npLMKREAFYfKVZXFBBQ station.png'),
-                                fit: BoxFit.fill,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.30,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/nHW6npLMKREAFYfKVZXFBBQ station.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ]),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.30,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/mQUdQXWL0t38aJj1v2y1offers with patternsquare only [Recovered]-16.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
               height: 3,
             ),
             Padding(
-              padding: EdgeInsets.only(
-                left: 0,
-                right: 0,
-              ),
+              padding: EdgeInsets.only(left: 0,right: 0,),
               child: Container(
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
+                child: Column(
+                  children: [
+                     Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(
-                            child: Text(
-                              'Live shawarma',
-                              style: TextStyle(fontSize: 8.5),
-                            ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'Live shawarma',
+                                  style: TextStyle(fontSize: 8),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'Live saj',
+                                  style: TextStyle(fontSize: 8.5),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'Live bbq',
+                                  style: TextStyle(fontSize: 8.5),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                      Row(
+                    ),
+                    SizedBox(height: 2,),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(
-                            child: Text(
-                              'Live saj',
-                              style: TextStyle(fontSize: 10),
-                            ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'Station',
+                                  style: TextStyle(fontSize: 8.5),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'Station',
+                                  style: TextStyle(fontSize: 8.5),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'Station',
+                                  style: TextStyle(fontSize: 8.5),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                      Row(
+                    ),
+                    SizedBox(height: 5,),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(
-                            child: Text(
-                              'Live bbq',
-                              style: TextStyle(fontSize: 10),
-                            ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'SAR 100.0',
+                                  style: TextStyle(fontSize: 8.5, color: Colors.grey),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'SAR 400.0',
+                                  style: TextStyle(fontSize: 8.5, color: Colors.grey),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'SAR 200.0',
+                                  style: TextStyle(fontSize: 8.5,color: Colors.grey),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                    ]),
-              ),
-            ),
-            SizedBox(
-              height: 2,
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: 20,
-                right: 20,
-              ),
-              child: Container(
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            child: Text(
-                              'Station',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: Text(
-                              'Station',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: Text(
-                              'Station',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ]),
-              ),
-            ),
-            SizedBox(
-              height: 2,
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: 20,
-                right: 20,
-              ),
-              child: Container(
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            child: Text(
-                              'SAR 200.0',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: Text(
-                              'SAR 200.0',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: Text(
-                              'SAR 200.0',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ]),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -399,65 +590,185 @@ class _HomeState extends State<Home> {
               ]),
             ),
             SizedBox(
-              height: 5,
+              height: 10,
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 20,
-                right: 20,
+                left: 10,
+                right: 10,
               ),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.2,
                 width: MediaQuery.of(context).size.width,
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height * 0.25,
-                            width: MediaQuery.of(context).size.width * 0.25,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/ChNa09jgm62fBKkVACm4red roses.png'),
-                                fit: BoxFit.fill,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.30,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/ChNa09jgm62fBKkVACm4red roses.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  foregroundColor: Colors.black,
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.25,
-                            height: MediaQuery.of(context).size.height * 0.25,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/2krfAf5eerQ5Is3f9tfVwhite roses.png'),
-                                fit: BoxFit.fill,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.30,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/2krfAf5eerQ5Is3f9tfVwhite roses.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  foregroundColor: Colors.black,
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.25,
-                            height: MediaQuery.of(context).size.height * 0.25,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/pkxgKFM0S3vq9cBWxvU0pink roses.png'),
-                                fit: BoxFit.fill,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.30,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/pkxgKFM0S3vq9cBWxvU0pink roses.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  foregroundColor: Colors.black,
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ]),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 7),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.37,
+                        width: MediaQuery.of(context).size.width * 0.30,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1,
+                              color: Color.fromARGB(255, 236, 229, 229)),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/pkxgKFM0S3vq9cBWxvU0pink roses.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: <Widget>[
+                            Positioned(
+                              height: 30,
+                              width: 30,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 3, right: 3),
+                                child: FloatingActionButton(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  foregroundColor: Colors.black,
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Color(0xff3E5521),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -505,9 +816,7 @@ class _HomeState extends State<Home> {
                     ]),
               ),
             ),
-            SizedBox(
-              height: 2,
-            ),
+            SizedBox(height: 5,),
             Padding(
               padding: EdgeInsets.only(
                 left: 0,
@@ -522,7 +831,7 @@ class _HomeState extends State<Home> {
                           Container(
                             child: Text(
                               'SAR 200.0',
-                              style: TextStyle(fontSize: 10),
+                              style: TextStyle(fontSize: 8.5, color: Colors.grey),
                             ),
                           ),
                         ],
@@ -532,7 +841,7 @@ class _HomeState extends State<Home> {
                           Container(
                             child: Text(
                               'SAR 200.0',
-                              style: TextStyle(fontSize: 10),
+                              style: TextStyle(fontSize: 8.5, color: Colors.grey),
                             ),
                           ),
                         ],
@@ -542,7 +851,7 @@ class _HomeState extends State<Home> {
                           Container(
                             child: Text(
                               'SAR 200.0',
-                              style: TextStyle(fontSize: 10),
+                              style: TextStyle(fontSize: 8.5, color: Colors.grey),
                             ),
                           ),
                         ],
@@ -551,12 +860,12 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 50,
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 20,
-                right: 20,
+                left: 10,
+                right: 10,
               ),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.1,
