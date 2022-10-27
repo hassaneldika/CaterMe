@@ -1,5 +1,7 @@
+import 'dart:html';
 import 'dart:ui';
 
+import 'package:caterme/HomePage/ui/screen/credit.dart';
 import 'package:html/parser.dart';
 
 import 'package:flutter/material.dart';
@@ -43,7 +45,11 @@ class _PaymentState extends State<Payment> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Credit(),
+                  ));
             },
             // ignore: prefer_const_constructors
             icon: Padding(
@@ -103,11 +109,12 @@ class _PaymentState extends State<Payment> {
                               Container(
                                 padding: const EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
-                                  border: Border.all(width: 1.0, color: Colors.red,),
-                                  borderRadius: BorderRadius.all(
-                                      Radius.circular(
-                                          12.0)
-                                      ),
+                                  border: Border.all(
+                                    width: 1.0,
+                                    color: Colors.red,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(12.0)),
                                 ),
                                 child: GestureDetector(
                                   child: Text(
