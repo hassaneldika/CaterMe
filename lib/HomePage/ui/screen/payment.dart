@@ -1,7 +1,7 @@
 import 'dart:html';
 import 'dart:ui';
 
-import 'package:caterme/HomePage/ui/screen/credit.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:html/parser.dart';
 
 import 'package:flutter/material.dart';
@@ -45,11 +45,7 @@ class _PaymentState extends State<Payment> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Credit(),
-                  ));
+              _settingModalBottomSheet(context);
             },
             // ignore: prefer_const_constructors
             icon: Padding(
@@ -139,4 +135,281 @@ class _PaymentState extends State<Payment> {
       ),
     );
   }
+}
+
+void _settingModalBottomSheet(context) {
+  showModalBottomSheet(
+      context: context,
+      builder: (BuildContext) {
+        backgroundColor:
+        Color(0xfff3f3f3);
+        return Container(
+          height: MediaQuery.of(context).size.height * 0.8,
+                width: MediaQuery.of(context).size.width,
+          child: new Wrap(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 10, right: 10, top: 20, bottom: 40),
+                child: Container(
+                  child: Text(
+                    'Add Credit/Debit Card',
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                child: Column(
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.08,
+                      width: MediaQuery.of(context).size.width,
+                      padding: EdgeInsets.only(
+                        left: 35,
+                      ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white),
+                      child: Center(
+                        child: TextField(
+                          keyboardType: TextInputType.name,
+                          style: TextStyle(color: Colors.black, fontSize: 11),
+                          decoration: InputDecoration(
+                            hintText: 'Card Number',
+                            hintStyle:
+                                TextStyle(color: Colors.grey, fontSize: 12),
+                            border: InputBorder.none,
+                            isDense: true,
+                            contentPadding: EdgeInsets.symmetric(
+                                horizontal: 0, vertical: 0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.12,
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(
+                    children: [
+                      Row(
+                        children: [
+                          Text('Expiry'),
+                        ],
+                      ),
+                      Spacer(),
+                      Row(
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width * 0.17,
+                            height: MediaQuery.of(context).size.height * 0.07,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
+                            child: TextField(
+                              textAlign: TextAlign.center,
+                              keyboardType: TextInputType.name,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 11,
+                              ),
+                              decoration: InputDecoration(
+                                isDense: true,
+                                hintText: 'MM',
+                                border: InputBorder.none,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 50,
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width * 0.17,
+                            height: MediaQuery.of(context).size.height * 0.07,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
+                            child: TextField(
+                              textAlign: TextAlign.center,
+                              keyboardType: TextInputType.name,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 11,
+                              ),
+                              decoration: InputDecoration(
+                                isDense: true,
+                                hintText: 'YY',
+                                border: InputBorder.none,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Padding(padding: EdgeInsets.only(left: 10, right: 10),
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.8,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 13, right: 13, top: 20),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.1,
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 255, 254, 254),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 136, 132, 132),
+                                  blurRadius: 3,
+                                  offset: Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            // ignore: prefer_const_literals_to_create_immutables
+                            child: Column(
+                              // ignore: prefer_const_literals_to_create_immutables
+                              children: [
+                                TextField(
+                                  keyboardType: TextInputType.name,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 11,
+                                  ),
+                                  decoration: InputDecoration(
+                                    contentPadding: const EdgeInsets.only(
+                                      left: 20,
+                                    ),
+                                    isDense: true,
+                                    hintText: 'First name',
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 13,
+                            right: 13,
+                          ),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.1,
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 255, 254, 254),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 136, 132, 132),
+                                  blurRadius: 3,
+                                  offset: Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            // ignore: prefer_const_literals_to_create_immutables
+                            child: Column(
+                              children: [
+                                TextField(
+                                  keyboardType: TextInputType.name,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 11,
+                                  ),
+                                  decoration: InputDecoration(
+                                    hintText: 'Last name',
+                                    contentPadding: const EdgeInsets.only(
+                                      left: 20,
+                                    ),
+                                    isDense: true,
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 13, right: 13, bottom: 20),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.1,
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Color(0xff3E5521)),
+                            // ignore: prefer_const_literals_to_create_immutables
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              // ignore: prefer_const_literals_to_create_immutables
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(20.0),
+                                  child: Container(
+                                    child: InkWell(
+                                      onTap: () {
+                                      },
+                                      child: Text(
+                                        'Add Card',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 15),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              ),
+              
+              
+              SizedBox(
+                height: 150,
+              ),
+            ],
+          ),
+        );
+      });
 }

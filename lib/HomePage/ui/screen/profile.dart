@@ -275,8 +275,8 @@ class _ProfileState extends State<Profile> {
                   ],
                 ),
               ),
-            ),
-            Padding(
+             ),
+             Padding(
               padding: EdgeInsets.all(12),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.34,
