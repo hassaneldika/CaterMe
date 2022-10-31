@@ -57,7 +57,7 @@ class _LoginState extends State<Login> {
                       keyboardType: TextInputType.emailAddress,
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 15,
+                        fontSize: 12,
                       ),
                       decoration: InputDecoration(
                         fillColor: Color.fromARGB(255, 255, 255, 255),
@@ -85,7 +85,7 @@ class _LoginState extends State<Login> {
                   child: Center(
                     child: TextField(
                       keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black, fontSize: 12,),
                       decoration: InputDecoration(
                          fillColor: Color.fromARGB(255, 255, 255, 255),
                          filled: true,
@@ -113,7 +113,7 @@ class _LoginState extends State<Login> {
                               builder: (context) => ForgetPassword()));
                     },
                     child: Text(
-                      'Forget Password?',
+                      'Forgot Password?',
                       style: TextStyle(fontSize: 10),
                     ),
                   ),
@@ -122,7 +122,7 @@ class _LoginState extends State<Login> {
                   height: 40,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  padding: const EdgeInsets.only(left: 15, right: 15),
                   child: Container(
                     alignment: Alignment.center,
                     height: MediaQuery.of(context).size.height * 0.1,
@@ -136,8 +136,8 @@ class _LoginState extends State<Login> {
                             MaterialPageRoute(builder: (context) => Home()));
                       },
                       child: Text(
-                        'Login',
-                        style: TextStyle(color: Colors.white, fontSize: 25),
+                        'Log In',
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ),
                   ),

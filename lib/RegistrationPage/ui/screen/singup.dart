@@ -269,7 +269,7 @@ class _SingupState extends State<Singup> {
                       },
                       child: Text(
                         'Sign up',
-                        style: TextStyle(color: Colors.white, fontSize: 15),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ),
                   ),

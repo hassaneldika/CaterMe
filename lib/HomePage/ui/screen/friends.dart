@@ -1,5 +1,6 @@
-import 'dart:html';
 
+
+import 'package:caterme/HomePage/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,7 +34,7 @@ class _FriendsState extends State<Friends> {
         backgroundColor: Color(0xff3E5521),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Settings(),));
           },
           icon: Icon(Icons.arrow_back),
         ),
@@ -47,7 +48,7 @@ class _FriendsState extends State<Friends> {
                     return Padding(
                       padding: const EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        height: MediaQuery.of(context).size.height * 0.4,
+                        height: MediaQuery.of(context).size.height * 0.9,
                         width: MediaQuery.of(context).size.width,
                         child: Padding(
                           padding: const EdgeInsets.only(
@@ -56,7 +57,7 @@ class _FriendsState extends State<Friends> {
                             children: [
                               Container(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.08,
+                                    MediaQuery.of(context).size.height * 0.1,
                                 width: MediaQuery.of(context).size.width,
                                 decoration: BoxDecoration(
                                   color: Color.fromARGB(255, 255, 254, 254),
@@ -92,7 +93,7 @@ class _FriendsState extends State<Friends> {
                               ),
                               Container(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.08,
+                                    MediaQuery.of(context).size.height * 0.1,
                                 width: MediaQuery.of(context).size.width,
                                 decoration: BoxDecoration(
                                   color: Color.fromARGB(255, 255, 254, 254),
@@ -119,7 +120,7 @@ class _FriendsState extends State<Friends> {
                               ),
                               Container(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.08,
+                                    MediaQuery.of(context).size.height * 0.1,
                                 width: MediaQuery.of(context).size.width,
                                 decoration:
                                     BoxDecoration(color: Color(0xff3E5521)),

@@ -6,6 +6,7 @@ import 'package:caterme/HomePage/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MyApp());
@@ -67,7 +68,17 @@ class _HomeState extends State<Home> {
                                   MaterialPageRoute(
                                       builder: ((context) => Settings())));
                             },
-                            child: Icon(Icons.person),
+                            child: Container(
+                            height: MediaQuery.of(context).size.height * 0.04,
+                            width: MediaQuery.of(context).size.width * 0.05,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/user.png'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
                           )
                         ],
                       ),
@@ -90,7 +101,17 @@ class _HomeState extends State<Home> {
                         children: [
                           InkWell(
                             onTap: () {},
-                            child: Icon(Icons.search),
+                            child: Container(
+                            height: MediaQuery.of(context).size.height * 0.04,
+                            width: MediaQuery.of(context).size.width * 0.05,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/Icon awesome-search.png'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
                           )
                         ],
                       ),
@@ -100,9 +121,9 @@ class _HomeState extends State<Home> {
             SizedBox(
               height: 30,
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: Container(
+            Container(
+                height: MediaQuery.of(context).size.height * 0.3,
+                width: MediaQuery.of(context).size.width * 0.9,
                 child: CarouselSlider(
                   options: CarouselOptions(
                     enlargeCenterPage: true,
@@ -119,9 +140,9 @@ class _HomeState extends State<Home> {
                                 Image.asset(
                                   e,
                                   height:
-                                      MediaQuery.of(context).size.height * 0.4,
-                                  width: MediaQuery.of(context).size.width,
-                                  fit: BoxFit.cover,
+                                      MediaQuery.of(context).size.height * 0.9,
+                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  fit: BoxFit.fitHeight,
                                 )
                               ],
                             ),
@@ -129,7 +150,6 @@ class _HomeState extends State<Home> {
                       .toList(),
                 ),
               ),
-            ),
             SizedBox(
               height: 40,
             ),

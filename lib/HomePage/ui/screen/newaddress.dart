@@ -68,10 +68,12 @@ class _NewaddressState extends State<Newaddress> {
                 height: 20,
               ),
               Container(
+                height: MediaQuery.of(context).size.height * 0.05,
+                width: MediaQuery.of(context).size.width,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 5, right: 5),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
                         height: MediaQuery.of(context).size.height * 0.055,
@@ -93,10 +95,7 @@ class _NewaddressState extends State<Newaddress> {
                                     crossAxisAlignment:
                                         WrapCrossAlignment.center,
                                     children: <Widget>[
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 3),
-                                        child: Image.asset(
+                                        Image.asset(
                                           "assets/images/Icon feather-home.png",
                                           height: MediaQuery.of(context)
                                                   .size
@@ -107,7 +106,7 @@ class _NewaddressState extends State<Newaddress> {
                                                   .width *
                                               0.035,
                                         ),
-                                      ),
+                                     
                                       Text('Home',
                                           style: TextStyle(fontSize: 10)),
                                     ],
@@ -139,11 +138,7 @@ class _NewaddressState extends State<Newaddress> {
                                         direction: Axis.horizontal,
                                         crossAxisAlignment:
                                             WrapCrossAlignment.center,
-                                        children: <Widget>[
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(right: 3),
-                                            child: Image.asset(
+                                        children: <Widget>[Image.asset(
                                               "assets/images/Icon feather-shopping-bag.png",
                                               height: MediaQuery.of(context)
                                                       .size
@@ -154,7 +149,7 @@ class _NewaddressState extends State<Newaddress> {
                                                       .width *
                                                   0.035,
                                             ),
-                                          ),
+                                          
                                           Text('Work',
                                               style: TextStyle(fontSize: 10)),
                                         ],
@@ -186,11 +181,7 @@ class _NewaddressState extends State<Newaddress> {
                                         direction: Axis.horizontal,
                                         crossAxisAlignment:
                                             WrapCrossAlignment.center,
-                                        children: <Widget>[
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(right: 3),
-                                            child: Image.asset(
+                                        children: <Widget>[Image.asset(
                                               "assets/images/Icon awesome-building.png",
                                               height: MediaQuery.of(context)
                                                       .size
@@ -201,7 +192,7 @@ class _NewaddressState extends State<Newaddress> {
                                                       .width *
                                                   0.035,
                                             ),
-                                          ),
+                                        
                                           Text('Parent\'s',
                                               style: TextStyle(fontSize: 10)),
                                         ],
@@ -233,11 +224,7 @@ class _NewaddressState extends State<Newaddress> {
                                         direction: Axis.horizontal,
                                         crossAxisAlignment:
                                             WrapCrossAlignment.center,
-                                        children: <Widget>[
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(right: 3),
-                                            child: Image.asset(
+                                        children: <Widget>[Image.asset(
                                               "assets/images/Icon feather-file-text.png",
                                               height: MediaQuery.of(context)
                                                       .size
@@ -248,7 +235,7 @@ class _NewaddressState extends State<Newaddress> {
                                                       .width *
                                                   0.035,
                                             ),
-                                          ),
+                                       
                                           Text(
                                             'Custom',
                                             style: TextStyle(fontSize: 10),
@@ -271,7 +258,7 @@ class _NewaddressState extends State<Newaddress> {
                 height: 20,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 255, 254, 254),
@@ -311,7 +298,7 @@ class _NewaddressState extends State<Newaddress> {
                 height: 20,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 255, 254, 254),
@@ -337,7 +324,7 @@ class _NewaddressState extends State<Newaddress> {
                 height: 20,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 255, 254, 254),
@@ -363,7 +350,7 @@ class _NewaddressState extends State<Newaddress> {
                 height: 20,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 255, 254, 254),
@@ -389,7 +376,7 @@ class _NewaddressState extends State<Newaddress> {
                 height: 20,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 255, 254, 254),
@@ -415,7 +402,7 @@ class _NewaddressState extends State<Newaddress> {
                 height: 20,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 255, 254, 254),
@@ -441,7 +428,7 @@ class _NewaddressState extends State<Newaddress> {
                 height: 20,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 255, 254, 254),
@@ -467,7 +454,7 @@ class _NewaddressState extends State<Newaddress> {
                 height: 30,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.09,
+                height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(color: Color(0xff3E5521)),
                 // ignore: prefer_const_literals_to_create_immutables

@@ -240,7 +240,7 @@ class _ProfileState extends State<Profile> {
                             height: MediaQuery.of(context).size.height * 0.1,
                             width: MediaQuery.of(context).size.width,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(10),
                                 color: Color(0xff3E5521)),
                             // ignore: prefer_const_literals_to_create_immutables
                             child: Row(

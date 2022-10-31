@@ -66,7 +66,7 @@ class _AddressesState extends State<Addresses> {
                       Padding(
                         padding: EdgeInsets.only(right: 7, left: 10),
                         child: Icon(
-                          Icons.calendar_month_sharp,
+                          Icons.house_outlined,
                           color: Color(0xff3E5521),
                         ),
                       ),

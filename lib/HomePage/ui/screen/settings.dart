@@ -11,7 +11,7 @@ import 'package:caterme/HomePage/ui/screen/payment.dart';
 import 'package:caterme/HomePage/ui/screen/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,7 +48,10 @@ class _SettingsState extends State<Settings> {
             },
             icon: Icon(Icons.arrow_back),
           ),
-          title: Text('Settings'),
+          title: Text(
+            'Settings',
+            style: TextStyle(fontSize: 18),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -125,9 +128,13 @@ class _SettingsState extends State<Settings> {
                                   borderRadius: BorderRadius.circular(10),
                                   color: Color(0xfff3f3f3),
                                 ),
-                                child: Icon(FontAwesomeIcons.clipboard,
-                                    color: Color(0xff3E5521)),
-                              ),
+                                  child: SvgPicture.asset(
+                                      'assets/images/Icon awesome-clipboard-list.svg',
+                                      width: MediaQuery.of(context).size.width * 0.035,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.035,),
+                                ),
+                            
                             ),
                             SizedBox(
                               height: 3,
@@ -143,7 +150,7 @@ class _SettingsState extends State<Settings> {
                             SizedBox(
                               height: 7,
                             ),
-                            InkWell(
+                            InkWell(         
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -151,16 +158,15 @@ class _SettingsState extends State<Settings> {
                                       builder: (context) => Occasion(),
                                     ));
                               },
-                              child: Container(
+                              child: Container(      
                                 width: MediaQuery.of(context).size.width * 0.15,
                                 height:
                                     MediaQuery.of(context).size.height * 0.07,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Color(0xfff3f3f3),
-                                ),
-                                 child: Icon(FontAwesomeIcons.calendarCheck,
-                                    color: Color(0xff3E5521)),
+                                child: SvgPicture.asset(
+                                      'assets/images/Icon awesome-calendar-check.svg',
+                                      width: MediaQuery.of(context).size.width * 0.01,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.07,),
                               ),
                             ),
                             SizedBox(
@@ -177,18 +183,17 @@ class _SettingsState extends State<Settings> {
                             SizedBox(
                               height: 7,
                             ),
-                            InkWell(
+                            InkWell(              
                               onTap: () {},
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 0.15,
                                 height:
                                     MediaQuery.of(context).size.height * 0.07,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Color(0xfff3f3f3),
-                                ),
-                                child: Icon(FontAwesomeIcons.headset,
-                                    color: Color(0xff3E5521)),
+                                child: SvgPicture.asset(
+                                      'assets/images/Icon awesome-headset.svg',
+                                      width: MediaQuery.of(context).size.width * 0.01,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.07,),
                               ),
                             ),
                             SizedBox(
@@ -231,7 +236,7 @@ class _SettingsState extends State<Settings> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(right: 7, left: 10),
-                                child: Icon(Icons.person_outline_rounded),
+                                child: Icon(FontAwesomeIcons.userCircle, size: 18,),
                               ),
                               Text(
                                 'Profile',
@@ -304,7 +309,7 @@ class _SettingsState extends State<Settings> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(right: 7, left: 10),
-                                child: Icon(Icons.person),
+                                child: Icon(Icons.group_outlined),
                               ),
                               Text(
                                 'Friends',
@@ -341,7 +346,7 @@ class _SettingsState extends State<Settings> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(right: 7, left: 10),
-                                child: Icon(Icons.payment_sharp),
+                                child: Icon(Icons.credit_card_outlined),
                               ),
                               Text(
                                 'Payment method',
@@ -504,7 +509,7 @@ class _SettingsState extends State<Settings> {
                         ),
                         Text(
                           'Sign out',
-                          style: TextStyle(fontSize: 17, color: Colors.red),
+                          style: TextStyle(fontSize: 11, color: Colors.red),
                         ),
                       ],
                     ),
