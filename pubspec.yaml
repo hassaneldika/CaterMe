@@ -84,6 +84,13 @@ flutter:
     - assets/images/nHW6npLMKREAFYfKVZXFBBQ station.png
     - assets/images/mQUdQXWL0t38aJj1v2y1offers with patternsquare only [Recovered]-16.png
     - assets/images/Repeat Grid 1.png
+    - assets/images/Icon feather-home.png
+    - assets/images/Icon feather-shopping-bag.png
+    - assets/images/Icon awesome-building.png
+    - assets/images/Icon feather-file-text.png
+    - assets/images/Icon metro-profile.png
+    - assets/images/Icon awesome-calendar-check.png
+    - assets/images/Icon ionic-ios-add-circle-outline.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

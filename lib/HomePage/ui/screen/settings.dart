@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
-
 import 'dart:ui';
 
 import 'package:caterme/HomePage/ui/screen/addresses.dart';
@@ -11,6 +10,8 @@ import 'package:caterme/HomePage/ui/screen/orders.dart';
 import 'package:caterme/HomePage/ui/screen/payment.dart';
 import 'package:caterme/HomePage/ui/screen/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -90,7 +91,8 @@ class _SettingsState extends State<Settings> {
                                   borderRadius: BorderRadius.circular(10),
                                   color: Color(0xfff3f3f3),
                                 ),
-                                child: Icon(Icons.notifications_outlined),
+                                child: Icon(Icons.notifications_outlined,
+                                    color: Color(0xff3E5521)),
                               ),
                             ),
                             SizedBox(
@@ -123,7 +125,8 @@ class _SettingsState extends State<Settings> {
                                   borderRadius: BorderRadius.circular(10),
                                   color: Color(0xfff3f3f3),
                                 ),
-                                child: Icon(Icons.list_alt_outlined),
+                                child: Icon(FontAwesomeIcons.clipboard,
+                                    color: Color(0xff3E5521)),
                               ),
                             ),
                             SizedBox(
@@ -156,7 +159,8 @@ class _SettingsState extends State<Settings> {
                                   borderRadius: BorderRadius.circular(10),
                                   color: Color(0xfff3f3f3),
                                 ),
-                                child: Icon(Icons.notifications_outlined),
+                                 child: Icon(FontAwesomeIcons.calendarCheck,
+                                    color: Color(0xff3E5521)),
                               ),
                             ),
                             SizedBox(
@@ -183,7 +187,8 @@ class _SettingsState extends State<Settings> {
                                   borderRadius: BorderRadius.circular(10),
                                   color: Color(0xfff3f3f3),
                                 ),
-                                child: Icon(Icons.contact_support_outlined),
+                                child: Icon(FontAwesomeIcons.headset,
+                                    color: Color(0xff3E5521)),
                               ),
                             ),
                             SizedBox(

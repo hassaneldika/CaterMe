@@ -112,8 +112,7 @@ class _OccasionState extends State<Occasion> {
                                   style: TextStyle(
                                       fontSize: 10, color: Colors.red),
                                 ),
-                                onTap: () {
-                                },
+                                onTap: () {},
                               )
                             ],
                           )

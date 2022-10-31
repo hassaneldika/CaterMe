@@ -47,90 +47,99 @@ class _OrdersState extends State<Orders> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.08,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color.fromARGB(255, 230, 226, 226),
-                      blurRadius: 1,
-                      offset: Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Breakfast',
-                        style: TextStyle(fontSize: 10, color: Colors.grey),
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color.fromARGB(255, 230, 226, 226),
+                        blurRadius: 1,
+                        offset: Offset(0, 2),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                  child: Row(
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          'Breakfast',
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
             SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.08,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color.fromARGB(255, 230, 226, 226),
-                      blurRadius: 1,
-                      offset: Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Dinner',
-                        style: TextStyle(fontSize: 10, color: Colors.grey),
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color.fromARGB(255, 230, 226, 226),
+                        blurRadius: 1,
+                        offset: Offset(0, 2),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                  child: Row(
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          'Dinner',
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
             SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.08,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color.fromARGB(255, 230, 226, 226),
-                      blurRadius: 1,
-                      offset: Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Birthday party',
-                        style: TextStyle(fontSize: 10, color: Colors.grey),
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color.fromARGB(255, 230, 226, 226),
+                        blurRadius: 1,
+                        offset: Offset(0, 2),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                  child: Row(
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          'Birthday party',
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

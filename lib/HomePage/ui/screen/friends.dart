@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,7 +41,118 @@ class _FriendsState extends State<Friends> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.4,
+                        width: MediaQuery.of(context).size.width,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10, top: 20, right: 10, bottom: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.08,
+                                width: MediaQuery.of(context).size.width,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 255, 254, 254),
+                                ),
+                                child: Column(
+                                  children: [
+                                    TextField(
+                                      keyboardType: TextInputType.name,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 11,
+                                      ),
+                                      decoration: InputDecoration(
+                                        hintText: 'Full Name',
+                                        contentPadding: EdgeInsets.all(20.0),
+                                        border: InputBorder.none,
+                                        suffixIcon: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Image.asset(
+                                            'assets/images/Icon metro-profile.png',
+                                            width: 20,
+                                            height: 20,
+                                            fit: BoxFit.fill,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.08,
+                                width: MediaQuery.of(context).size.width,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 255, 254, 254),
+                                ),
+                                child: Column(
+                                  children: [
+                                    TextField(
+                                      keyboardType: TextInputType.name,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 11,
+                                      ),
+                                      decoration: InputDecoration(
+                                        hintText: 'Phone Number',
+                                        contentPadding: EdgeInsets.all(20.0),
+                                        border: InputBorder.none,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Container(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.08,
+                                width: MediaQuery.of(context).size.width,
+                                decoration:
+                                    BoxDecoration(color: Color(0xff3E5521)),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  // ignore: prefer_const_literals_to_create_immutables
+                                  children: [
+                                    Container(
+                                      child: InkWell(
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => Friends(),
+                                              ));
+                                        },
+                                        child: Text(
+                                          'Add',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 15),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  });
             },
             // ignore: prefer_const_constructors
             icon: Padding(
@@ -75,7 +188,8 @@ class _FriendsState extends State<Friends> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 20),
-                      child: Icon(Icons.person_outline_rounded, color: Colors.grey),
+                      child: Icon(Icons.person_outline_rounded,
+                          color: Colors.grey),
                     ),
                     Text(
                       'Walid Taktak',
@@ -85,7 +199,9 @@ class _FriendsState extends State<Friends> {
                 ),
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
@@ -106,7 +222,8 @@ class _FriendsState extends State<Friends> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 20),
-                      child: Icon(Icons.person_outline_rounded, color: Colors.grey),
+                      child: Icon(Icons.person_outline_rounded,
+                          color: Colors.grey),
                     ),
                     Text(
                       'Walid Taktak',
@@ -116,7 +233,9 @@ class _FriendsState extends State<Friends> {
                 ),
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
@@ -137,7 +256,8 @@ class _FriendsState extends State<Friends> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 20),
-                      child: Icon(Icons.person_outline_rounded, color: Colors.grey),
+                      child: Icon(Icons.person_outline_rounded,
+                          color: Colors.grey),
                     ),
                     Text(
                       'Walid Taktak',
