@@ -1,4 +1,4 @@
-
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -38,7 +38,10 @@ class _NotificationsState extends State<Notifications> {
           },
           icon: Icon(Icons.arrow_back),
         ),
-        title: Text('Notifications'),
+        title: Text(
+          'Notifications',
+          style: TextStyle(fontSize: 15),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -76,11 +79,13 @@ class _NotificationsState extends State<Notifications> {
                                   style: TextStyle(
                                       fontSize: 10, color: Colors.black),
                                 ),
-                                SizedBox(height: 3,),
+                                SizedBox(
+                                  height: 3,
+                                ),
                                 Text(
                                   'Now',
-                                  style:
-                                      TextStyle(fontSize: 10, color: Colors.grey),
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.grey),
                                 ),
                               ],
                             ),
@@ -128,11 +133,13 @@ class _NotificationsState extends State<Notifications> {
                                   style: TextStyle(
                                       fontSize: 10, color: Colors.black),
                                 ),
-                                SizedBox(height: 3,),
+                                SizedBox(
+                                  height: 3,
+                                ),
                                 Text(
                                   '1 hr ago',
-                                  style:
-                                      TextStyle(fontSize: 10, color: Colors.grey),
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.grey),
                                 ),
                               ],
                             ),
@@ -180,11 +187,13 @@ class _NotificationsState extends State<Notifications> {
                                   style: TextStyle(
                                       fontSize: 10, color: Colors.black),
                                 ),
-                                SizedBox(height: 3,),
+                                SizedBox(
+                                  height: 3,
+                                ),
                                 Text(
                                   '1 hr ago',
-                                  style:
-                                      TextStyle(fontSize: 10, color: Colors.grey),
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.grey),
                                 ),
                               ],
                             ),
@@ -205,8 +214,10 @@ class _NotificationsState extends State<Notifications> {
                       color: Color.fromARGB(255, 209, 204, 204),
                     ),
                   ),
-                  SizedBox(height: 15,),
-                   Container(
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Container(
                     height: MediaQuery.of(context).size.height * 0.07,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
@@ -230,11 +241,13 @@ class _NotificationsState extends State<Notifications> {
                                   style: TextStyle(
                                       fontSize: 10, color: Colors.black),
                                 ),
-                                SizedBox(height: 3,),
+                                SizedBox(
+                                  height: 3,
+                                ),
                                 Text(
                                   '1 hr ago',
-                                  style:
-                                      TextStyle(fontSize: 10, color: Colors.grey),
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.grey),
                                 ),
                               ],
                             ),

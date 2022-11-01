@@ -217,13 +217,15 @@ class _HomeState extends State<Home> {
                               child: Padding(
                                 padding:
                                     const EdgeInsets.only(bottom: 3, right: 3),
-                                child: FloatingActionButton(
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 255, 255),
-                                  onPressed: () {},
-                                  child: Icon(
-                                    Icons.add,
-                                    color: Color(0xff3E5521),
+                                child: Container(
+                                  child: FloatingActionButton(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 255, 255, 255),
+                                    onPressed: () {},
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Color(0xff3E5521),
+                                    ),
                                   ),
                                 ),
                               ),

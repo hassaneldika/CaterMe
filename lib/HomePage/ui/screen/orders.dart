@@ -1,5 +1,7 @@
+import 'dart:ui';
 
-
+import 'package:caterme/HomePage/ui/screen/breakfast.dart';
+import 'package:caterme/HomePage/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,11 +35,18 @@ class _OrdersState extends State<Orders> {
         backgroundColor: Color(0xff3E5521),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Settings(),
+                ));
           },
           icon: Icon(Icons.arrow_back),
         ),
-        title: Text('Orders'),
+        title: Text(
+          'Orders',
+          style: TextStyle(fontSize: 15),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -48,7 +57,13 @@ class _OrdersState extends State<Orders> {
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Breakfast(),
+                      ));
+                },
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.08,
                   width: MediaQuery.of(context).size.width,
@@ -77,11 +92,19 @@ class _OrdersState extends State<Orders> {
                 ),
               ),
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: InkWell(
-                onTap: (){},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Breakfast(),
+                      ));
+                },
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.08,
                   width: MediaQuery.of(context).size.width,
@@ -110,11 +133,19 @@ class _OrdersState extends State<Orders> {
                 ),
               ),
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: InkWell(
-                onTap: (){},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Breakfast(),
+                      ));
+                },
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.08,
                   width: MediaQuery.of(context).size.width,
@@ -143,7 +174,6 @@ class _OrdersState extends State<Orders> {
                 ),
               ),
             ),
-            
           ],
         ),
       ),

@@ -4,6 +4,8 @@ import 'dart:ui';
 
 import 'package:caterme/HomePage/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,8 +42,7 @@ class _ProfileState extends State<Profile> {
           },
           icon: Icon(Icons.arrow_back),
         ),
-        title: Text('Profile'),
-        centerTitle: true,
+        title: Text('Profile', style: TextStyle(fontSize: 15),),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -85,7 +86,7 @@ class _ProfileState extends State<Profile> {
                                   keyboardType: TextInputType.name,
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 11,
+                                    fontSize: 9,
                                   ),
                                   decoration: InputDecoration(
                                     contentPadding: const EdgeInsets.only(
@@ -130,7 +131,7 @@ class _ProfileState extends State<Profile> {
                                   keyboardType: TextInputType.name,
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 11,
+                                    fontSize: 9,
                                   ),
                                   decoration: InputDecoration(
                                     hintText: 'Last name',
@@ -175,7 +176,7 @@ class _ProfileState extends State<Profile> {
                                   keyboardType: TextInputType.name,
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 11,
+                                    fontSize: 9,
                                   ),
                                   decoration: InputDecoration(
                                     hintText: 'Gender',
@@ -217,7 +218,7 @@ class _ProfileState extends State<Profile> {
                                   keyboardType: TextInputType.name,
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 11,
+                                    fontSize: 9,
                                   ),
                                   decoration: InputDecoration(
                                     hintText: 'Date of birth',
@@ -279,7 +280,7 @@ class _ProfileState extends State<Profile> {
              Padding(
               padding: EdgeInsets.all(12),
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.34,
+                height: MediaQuery.of(context).size.height * 0.31,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -294,7 +295,7 @@ class _ProfileState extends State<Profile> {
                       children: [
                         Text(
                           'Email address',
-                          style: TextStyle(color: Colors.grey, fontSize: 11),
+                          style: TextStyle(color: Colors.grey, fontSize: 9),
                         ),
                       ],
                     ),
@@ -305,12 +306,12 @@ class _ProfileState extends State<Profile> {
                         keyboardType: TextInputType.name,
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12,
+                            fontSize: 9,
                             fontWeight: FontWeight.bold),
                         decoration: InputDecoration(
                           hintText: 'Example@gmail.com',
                           hintStyle:
-                              TextStyle(fontSize: 12.0, color: Colors.black),
+                              TextStyle(fontSize: 9.0, color: Colors.black),
                           contentPadding: EdgeInsets.all(20.0),
                           border: InputBorder.none,
                         ),
@@ -335,7 +336,7 @@ class _ProfileState extends State<Profile> {
                       children: [
                         Text(
                           'Phone number',
-                          style: TextStyle(color: Colors.grey, fontSize: 11),
+                          style: TextStyle(color: Colors.grey, fontSize: 9),
                         ),
                       ],
                     ),
@@ -348,7 +349,7 @@ class _ProfileState extends State<Profile> {
                           child: Text(
                             '+96100000000',
                             style: TextStyle(
-                                fontSize: 12,
+                                fontSize: 9,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black),
                           ),
@@ -364,7 +365,8 @@ class _ProfileState extends State<Profile> {
                                     child: InkWell(
                                       onTap: () {},
                                       child: Icon(
-                                        Icons.edit_calendar_outlined,
+                                        FontAwesomeIcons.solidEdit,
+                                        size: 18,
                                         color: Color(0xff3E5521),
                                       ),
                                     ),
@@ -393,11 +395,11 @@ class _ProfileState extends State<Profile> {
                     keyboardType: TextInputType.emailAddress,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 12,
+                      fontSize: 9,
                     ),
                     decoration: InputDecoration(
                       hintText: 'Change password',
-                      hintStyle: TextStyle(fontSize: 12.0, color: Colors.black),
+                      hintStyle: TextStyle(fontSize: 9.0, color: Colors.black),
                       border: InputBorder.none,
                       prefixIcon: Icon(
                         Icons.lock_outlined,
@@ -431,7 +433,7 @@ class _ProfileState extends State<Profile> {
                       ),
                       Text(
                         'Delete my account',
-                        style: TextStyle(fontSize: 12, color: Colors.red),
+                        style: TextStyle(fontSize: 9, color: Colors.red),
                       ),
                     ],
                   ),

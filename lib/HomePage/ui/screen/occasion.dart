@@ -1,9 +1,13 @@
 
 import 'dart:ui';
 
+import 'package:caterme/HomePage/ui/screen/addocassion.dart';
+import 'package:caterme/HomePage/ui/screen/addresses.dart';
 import 'package:caterme/HomePage/ui/screen/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,10 +44,19 @@ class _OccasionState extends State<Occasion> {
           },
           icon: Icon(Icons.arrow_back),
         ),
-        title: Text('Occasions'),
+        title: Text(
+          'Occasions',
+          style: TextStyle(fontSize: 15),
+        ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Addocassion(),
+                  ));
+            },
             // ignore: prefer_const_constructors
             icon: Padding(
               padding: const EdgeInsets.only(right: 30),
@@ -65,7 +78,7 @@ class _OccasionState extends State<Occasion> {
                       Padding(
                         padding: EdgeInsets.only(right: 7, left: 10),
                         child: Icon(
-                          Icons.calendar_month_sharp,
+                          FontAwesomeIcons.solidCalendarDays,
                           color: Color(0xff3E5521),
                         ),
                       ),

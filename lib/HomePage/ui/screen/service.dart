@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:caterme/HomePage/ui/screen/home.dart';
 import 'package:caterme/HomePage/ui/screen/payment.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 void main() {
@@ -109,29 +110,28 @@ class _OrderState extends State<Order> {
                   height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xfff3f3f3),
-                      ),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xfff3f3f3),
+                  ),
                   child: Center(
-                      child: TextField(
-                        keyboardType: TextInputType.text,
+                    child: TextField(
+                      keyboardType: TextInputType.text,
                       style: TextStyle(
                         color: Colors.black,
-                         fontSize: 10,
+                        fontSize: 10,
                       ),
-            decoration: InputDecoration(
-              border: InputBorder.none,
-               hintText: 'Title of occasion.',
-                enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 1, color: Colors.grey),
-                ),
-                
-                ),
-          ),
-        ),
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Title of occasion.',
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.grey),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              
+              ),
               SizedBox(
                 height: 20,
               ),
@@ -293,7 +293,7 @@ class _OrderState extends State<Order> {
                 padding: EdgeInsets.only(
                   top: 10,
                 ),
-                height: MediaQuery.of(context).size.height * 0.6,
+                height: MediaQuery.of(context).size.height * 0.65,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -301,202 +301,245 @@ class _OrderState extends State<Order> {
                 child: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Row(
                           children: [
-                            Image.asset(
-                              'assets/images/B0i4KZYLg2cSh5SN3e9aIftar ramadan extra.png',
-                              fit: BoxFit.cover,
-                              height: MediaQuery.of(context).size.height * 0.18,
-                              width: MediaQuery.of(context).size.width * 0.22,
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: Column(
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                              Text(
-                                'Iftar ramadan extra',
-                                style: TextStyle(fontSize: 8),
-                              ),
-                              Text(
-                                'SAR 15',
-                                style: TextStyle(fontSize: 8),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                height: 25,
-                                width: 100,
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
+                              child: Container(
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.white,
-                                  // ignore: prefer_const_literals_to_create_immutables
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color.fromARGB(255, 179, 177, 177),
-                                      offset: const Offset(
-                                        5.0,
-                                        5.0,
-                                      ),
-                                      blurRadius: 5.0,
-                                      spreadRadius: 2.0,
-                                    ), //BoxShadow
-                                    BoxShadow(
-                                      color: Colors.white,
-                                      offset: const Offset(0.0, 0.0),
-                                      blurRadius: 0.0,
-                                      spreadRadius: 0.0,
-                                    ), //BoxShadow
-                                  ],
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20.0)),
                                 ),
-                                child: Icon(Icons.sports_basketball),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Row(
-                              children: [
-                                Image.asset(
-                                  'assets/images/6gi5koKe6av1YULrp9Gfoffers with pattern [Recovered]-09-01.png',
+                                child: Image.asset(
+                                  'assets/images/B0i4KZYLg2cSh5SN3e9aIftar ramadan extra.png',
                                   fit: BoxFit.cover,
                                   height:
                                       MediaQuery.of(context).size.height * 0.18,
                                   width:
-                                      MediaQuery.of(context).size.width * 0.21,
+                                      MediaQuery.of(context).size.width * 0.32,
                                 ),
-                              ],
+                              ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, top: 10),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.18,
+                            width: MediaQuery.of(context).size.width * 0.45,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
                               child: Column(
-                                // ignore: prefer_const_literals_to_create_immutables
                                 children: [
-                                  Text(
-                                    'Breakfast',
-                                    style: TextStyle(fontSize: 8),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Iftar Ramadan extra',
+                                        style: TextStyle(
+                                            fontSize: 7,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    'SAR 15',
-                                    style: TextStyle(fontSize: 8),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('SAR 15',
+                                          style: TextStyle(
+                                              fontSize: 8,
+                                              color: Color(0xff3E5521))),
+                                    ],
                                   ),
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Container(
-                                    height: 25,
-                                    width: 100,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: Colors.white,
-                                      // ignore: prefer_const_literals_to_create_immutables
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Color.fromARGB(
-                                              255, 179, 177, 177),
-                                          offset: const Offset(
-                                            5.0,
-                                            5.0,
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 30,
+                                        width: 30,
+                                        child: FloatingActionButton(
+                                          backgroundColor: Color.fromARGB(
+                                              255, 255, 255, 255),
+                                          onPressed: () {},
+                                          child: Icon(
+                                            Icons.add,
+                                            color: Color(0xff3E5521),
                                           ),
-                                          blurRadius: 5.0,
-                                          spreadRadius: 2.0,
-                                        ), //BoxShadow
-                                        BoxShadow(
-                                          color: Colors.white,
-                                          offset: const Offset(0.0, 0.0),
-                                          blurRadius: 0.0,
-                                          spreadRadius: 0.0,
-                                        ), //BoxShadow
-                                      ],
-                                    ),
-                                    child: Icon(Icons.sports_basketball),
+                                        ),
+                                      )
+                                    ],
                                   )
                                 ],
                               ),
                             ),
-                          ],
+                          ),
                         )
                       ],
                     ),
-                    Column(
+                    Row(
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Row(
-                              children: [
-                                Image.asset(
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20.0)),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/B0i4KZYLg2cSh5SN3e9aIftar ramadan extra.png',
+                                  fit: BoxFit.cover,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.18,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.32,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, top: 10),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.18,
+                            width: MediaQuery.of(context).size.width * 0.45,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Breakfast',
+                                        style: TextStyle(
+                                            fontSize: 7,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('SAR 15',
+                                          style: TextStyle(
+                                              fontSize: 8,
+                                              color: Color(0xff3E5521))),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 30,
+                                        width: 30,
+                                        child: FloatingActionButton(
+                                          backgroundColor: Color.fromARGB(
+                                              255, 255, 255, 255),
+                                          onPressed: () {},
+                                          child: Icon(
+                                            Icons.add,
+                                            color: Color(0xff3E5521),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20.0)),
+                                ),
+                                child: Image.asset(
                                   'assets/images/offers with patternsquare only [Recovered]-05.png',
                                   fit: BoxFit.cover,
                                   height:
                                       MediaQuery.of(context).size.height * 0.18,
                                   width:
-                                      MediaQuery.of(context).size.width * 0.25,
+                                      MediaQuery.of(context).size.width * 0.32,
                                 ),
-                              ],
+                              ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, top: 10),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.18,
+                            width: MediaQuery.of(context).size.width * 0.45,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
                               child: Column(
-                                // ignore: prefer_const_literals_to_create_immutables
                                 children: [
-                                  Text(
-                                    'Coffee with chocolate flavor',
-                                    style: TextStyle(fontSize: 8),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Coffe with chocolate flavor',
+                                        style: TextStyle(
+                                            fontSize: 7,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    'SAR 15',
-                                    style: TextStyle(fontSize: 8),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('SAR 15',
+                                          style: TextStyle(
+                                              fontSize: 8,
+                                              color: Color(0xff3E5521))),
+                                    ],
                                   ),
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Container(
-                                    height: 25,
-                                    width: 100,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: Colors.white,
-                                      // ignore: prefer_const_literals_to_create_immutables
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Color.fromARGB(
-                                              255, 179, 177, 177),
-                                          offset: const Offset(
-                                            5.0,
-                                            5.0,
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 30,
+                                        width: 30,
+                                        child: FloatingActionButton(
+                                          backgroundColor: Color.fromARGB(
+                                              255, 255, 255, 255),
+                                          onPressed: () {},
+                                          child: Icon(
+                                            Icons.add,
+                                            color: Color(0xff3E5521),
                                           ),
-                                          blurRadius: 5.0,
-                                          spreadRadius: 2.0,
-                                        ), //BoxShadow
-                                        BoxShadow(
-                                          color: Colors.white,
-                                          offset: const Offset(0.0, 0.0),
-                                          blurRadius: 0.0,
-                                          spreadRadius: 0.0,
-                                        ), //BoxShadow
-                                      ],
-                                    ),
-                                    child: Icon(Icons.sports_basketball),
+                                        ),
+                                      )
+                                    ],
                                   )
                                 ],
                               ),
                             ),
-                          ],
+                          ),
                         )
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -724,27 +767,27 @@ class _OrderState extends State<Order> {
                 height: 30,
               ),
               Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: MediaQuery.of(context).size.height * 0.1,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Color(0xff3E5521)),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Payment()));
-                      },
-                      child: Text(
-                        'Checkout',
-                        style: TextStyle(color: Colors.white, fontSize: 15),
-                      ),
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                child: Container(
+                  alignment: Alignment.center,
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Color(0xff3E5521)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Payment()));
+                    },
+                    child: Text(
+                      'Checkout',
+                      style: TextStyle(color: Colors.white, fontSize: 15),
                     ),
                   ),
                 ),
-          ],
+              ),
+            ],
           ),
         ),
       ),

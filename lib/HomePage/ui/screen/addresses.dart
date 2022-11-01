@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:ui';
+
 import 'package:caterme/HomePage/ui/screen/home.dart';
 import 'package:caterme/HomePage/ui/screen/newaddress.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,11 +42,18 @@ class _AddressesState extends State<Addresses> {
           },
           icon: Icon(Icons.arrow_back),
         ),
-        title: Text('Addresses'),
+        title: Text(
+          'Addresses',
+          style: TextStyle(fontSize: 15),
+        ),
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Newaddress(),));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Newaddress(),
+                  ));
             },
             // ignore: prefer_const_constructors
             icon: Padding(
@@ -54,75 +64,107 @@ class _AddressesState extends State<Addresses> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-                padding: EdgeInsets.only(top: 20, right: 15),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(right: 7, left: 10),
-                        child: Icon(
-                          Icons.house_outlined,
-                          color: Color(0xff3E5521),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.9,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: Column(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.07,
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(right: 10, left: 10),
+                          child: Icon(
+                            Icons.house_outlined,
+                            color: Color(0xff3E5521),
+                          ),
                         ),
-                      ),
-                      Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 7),
-                              child: Text(
-                                'Home',
-                                style: TextStyle(
-                                    fontSize: 12, color: Colors.black),
-                              ),
-                            ),
-                            Text(
-                              'Street, building apartment',
-                              style: TextStyle(fontSize: 8, color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Spacer(),
-                      Row(
-                        children: [
-                          Container(
-                            child: Row(
+                        Padding(
+                          padding: const EdgeInsets.only(top: 7),
+                          child: Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 7),
-                                  child: InkWell(
-                                    onTap: () {},
-                                    child: Icon(Icons.edit),
-                                  ),
-                                )
+                                Text(
+                                  'Home',
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.black),
+                                ),
+                                Text(
+                                  'Street, building apartment',
+                                  style: TextStyle(
+                                      fontSize: 8, color: Colors.grey),
+                                ),
                               ],
                             ),
                           ),
-                          Row(
+                        ),
+                        Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Row(
                             children: [
-                              GestureDetector(
-                                child: Text(
-                                  'Delete',
-                                  style: TextStyle(
-                                      fontSize: 10, color: Colors.red),
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 7),
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: Icon(
+                                          Icons.edit,
+                                          color: Color(0xff3E5521),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
-                                onTap: () {},
-                              )
+                              ),
+                              Row(
+                                children: [
+                                  GestureDetector(
+                                    child: Text(
+                                      'Delete',
+                                      style: TextStyle(
+                                          fontSize: 10, color: Colors.red),
+                                    ),
+                                    onTap: () {},
+                                  )
+                                ],
+                              ),
                             ],
-                          )
-                        ],
-                      ),
-                    ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                )),
-          ],
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 10, left: 16),
+                    child: Divider(
+                      height: 0.5,
+                      indent: 1,
+                      endIndent: 0,
+                      color: Color.fromARGB(255, 209, 204, 204),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );
