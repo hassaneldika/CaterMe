@@ -70,14 +70,14 @@ class _ChatState extends State<Chat> {
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.height * 0.08,
-                    width: MediaQuery.of(context).size.width * 0.5,
+                    width: MediaQuery.of(context).size.width * 0.6,
                     decoration: BoxDecoration(color: Color.fromARGB(255, 202, 197, 197),
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(10.0),
                            topLeft: Radius.circular(10.0),
                           bottomRight: Radius.circular(10.0)),
                     ),
-                    child: Text('Hello Janet, What\'s up!!', style: TextStyle(fontSize: 10),),
+                    child: Center(child: Text('Hello Janet, What\'s up!!', style: TextStyle(fontSize: 10),)),
                   )
                 ],
               ),
@@ -97,14 +97,17 @@ class _ChatState extends State<Chat> {
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.height * 0.08,
-                    width: MediaQuery.of(context).size.width * 0.5,
+                    width: MediaQuery.of(context).size.width * 0.6,
                     decoration: BoxDecoration(color: Color.fromARGB(255, 236, 236, 236),
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(10.0),
                            topLeft: Radius.circular(10.0),
                           bottomLeft: Radius.circular(10.0)),
                     ),
-                    child: Text('Hi Anthony, I am fine. will share files by EOD', style: TextStyle(fontSize: 10),),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Center(child: Text('Hi Anthony, I am fine. will share files by EOD', style: TextStyle(fontSize: 10),)),
+                    ),
                   )
                 ],
               ),
@@ -131,7 +134,7 @@ class _ChatState extends State<Chat> {
                            topLeft: Radius.circular(10.0),
                           bottomRight: Radius.circular(10.0)),
                     ),
-                    child: Text('Great! Thank you', style: TextStyle(fontSize: 10),),
+                    child: Center(child: Text('Great! Thank you', style: TextStyle(fontSize: 10),)),
                   )
                 ],
               ),
@@ -158,7 +161,7 @@ class _ChatState extends State<Chat> {
                            topLeft: Radius.circular(10.0),
                           bottomLeft: Radius.circular(10.0)),
                     ),
-                    child: Text('You are welcome', style: TextStyle(fontSize: 10),),
+                    child: Center(child: Text('You are welcome', style: TextStyle(fontSize: 10),)),
                   )
                 ],
               ),
@@ -178,14 +181,17 @@ class _ChatState extends State<Chat> {
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.height * 0.08,
-                    width: MediaQuery.of(context).size.width * 0.5,
+                    width: MediaQuery.of(context).size.width * 0.6,
                     decoration: BoxDecoration(color: Color.fromARGB(255, 202, 197, 197),
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(10.0),
                            topLeft: Radius.circular(10.0),
                           bottomRight: Radius.circular(10.0)),
                     ),
-                    child: Text('I will transfer your payment by this week. is it fine', style: TextStyle(fontSize: 10),),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: Center(child: Text('I will transfer your payment by this week. is it fine?', style: TextStyle(fontSize: 10),)),
+                    ),
                   )
                 ],
               ),
@@ -198,6 +204,7 @@ class _ChatState extends State<Chat> {
               ],
             ),
             ),
+            SizedBox(height: 150,)
           ],
         ),
       ),
