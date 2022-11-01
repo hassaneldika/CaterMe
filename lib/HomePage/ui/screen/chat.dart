@@ -71,7 +71,7 @@ class _ChatState extends State<Chat> {
                   Container(
                     height: MediaQuery.of(context).size.height * 0.08,
                     width: MediaQuery.of(context).size.width * 0.5,
-                    decoration: BoxDecoration(color: Color.fromARGB(255, 184, 181, 181),
+                    decoration: BoxDecoration(color: Color.fromARGB(255, 202, 197, 197),
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(10.0),
                            topLeft: Radius.circular(10.0),
@@ -81,6 +81,122 @@ class _ChatState extends State<Chat> {
                   )
                 ],
               ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, top: 10),
+            child: Row(
+              children: [
+                Text('10:35 am', style: TextStyle(fontSize: 10, color: Colors.grey),),
+              ],
+            ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 20, top: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.08,
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    decoration: BoxDecoration(color: Color.fromARGB(255, 236, 236, 236),
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(10.0),
+                           topLeft: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10.0)),
+                    ),
+                    child: Text('Hi Anthony, I am fine. will share files by EOD', style: TextStyle(fontSize: 10),),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 20, top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text('10:58 am', style: TextStyle(fontSize: 10, color: Colors.grey),),
+              ],
+            ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, top: 30),
+              child: Row(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.08,
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    decoration: BoxDecoration(color: Color.fromARGB(255, 202, 197, 197),
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(10.0),
+                           topLeft: Radius.circular(10.0),
+                          bottomRight: Radius.circular(10.0)),
+                    ),
+                    child: Text('Great! Thank you', style: TextStyle(fontSize: 10),),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, top: 10),
+            child: Row(
+              children: [
+                Text('11:25 am', style: TextStyle(fontSize: 10, color: Colors.grey),),
+              ],
+            ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 20, top: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.08,
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    decoration: BoxDecoration(color: Color.fromARGB(255, 236, 236, 236),
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(10.0),
+                           topLeft: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10.0)),
+                    ),
+                    child: Text('You are welcome', style: TextStyle(fontSize: 10),),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 20, top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text('11:40 am', style: TextStyle(fontSize: 10, color: Colors.grey),),
+              ],
+            ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, top: 30),
+              child: Row(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.08,
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    decoration: BoxDecoration(color: Color.fromARGB(255, 202, 197, 197),
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(10.0),
+                           topLeft: Radius.circular(10.0),
+                          bottomRight: Radius.circular(10.0)),
+                    ),
+                    child: Text('I will transfer your payment by this week. is it fine', style: TextStyle(fontSize: 10),),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, top: 10),
+            child: Row(
+              children: [
+                Text('11:57 am', style: TextStyle(fontSize: 10, color: Colors.grey),),
+              ],
+            ),
             ),
           ],
         ),

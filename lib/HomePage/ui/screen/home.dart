@@ -649,7 +649,7 @@ class _HomeState extends State<Home> {
                               width: 30,
                               child: Padding(
                                 padding:
-                                    const EdgeInsets.only(top: 3, right: 3),
+                                    const EdgeInsets.only(top: 3, right: 3,),
                                 child: FloatingActionButton(
                                   backgroundColor:
                                       Color.fromARGB(255, 255, 255, 255),
