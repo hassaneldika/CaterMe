@@ -41,7 +41,8 @@ class _PaymentState extends State<Payment> {
           },
           icon: Icon(Icons.arrow_back),
         ),
-        title: Text('Payment method'),
+        titleSpacing: 0,
+        title: Text('Payment method', style: TextStyle(fontSize: 12),),
         actions: [
           IconButton(
             onPressed: () {

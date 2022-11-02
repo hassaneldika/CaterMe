@@ -1,8 +1,8 @@
 
 import 'dart:ui';
 
-import 'package:caterme/HomePage/ui/screen/addocassion.dart';
-import 'package:caterme/HomePage/ui/screen/addresses.dart';
+import 'package:caterme/Mixed/ui/screen/addocassion.dart';
+import 'package:caterme/Mixed/ui/screen/addresses.dart';
 import 'package:caterme/HomePage/ui/screen/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -44,9 +44,10 @@ class _OccasionState extends State<Occasion> {
           },
           icon: Icon(Icons.arrow_back),
         ),
+        titleSpacing: 0,
         title: Text(
           'Occasions',
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 12),
         ),
         actions: [
           IconButton(

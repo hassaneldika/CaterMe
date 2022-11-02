@@ -3,15 +3,18 @@
 
 import 'dart:ui';
 
-import 'package:caterme/HomePage/ui/screen/addresses.dart';
-import 'package:caterme/HomePage/ui/screen/chat.dart';
-import 'package:caterme/HomePage/ui/screen/friends.dart';
+import 'package:caterme/HomePage/ui/widget/home.dart';
+import 'package:caterme/Mixed/ui/screen/addresses.dart';
+import 'package:caterme/Mixed/ui/screen/chat.dart';
+import 'package:caterme/Mixed/ui/screen/friends.dart';
 import 'package:caterme/HomePage/ui/screen/home.dart';
-import 'package:caterme/HomePage/ui/screen/notifications.dart';
-import 'package:caterme/HomePage/ui/screen/occasion.dart';
-import 'package:caterme/HomePage/ui/screen/orders.dart';
-import 'package:caterme/HomePage/ui/screen/payment.dart';
-import 'package:caterme/HomePage/ui/screen/profile.dart';
+import 'package:caterme/Mixed/ui/screen/notifications.dart';
+import 'package:caterme/Mixed/ui/screen/occasion.dart';
+import 'package:caterme/Mixed/ui/screen/orders.dart';
+import 'package:caterme/Mixed/ui/screen/payment.dart';
+import 'package:caterme/Mixed/ui/screen/profile.dart';
+import 'package:caterme/RegistrationPage/ui/screen/login.dart';
+import 'package:caterme/RegistrationPage/ui/widget/login.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -55,9 +58,10 @@ class _SettingsState extends State<Settings> {
             },
             icon: Icon(Icons.arrow_back),
           ),
+          titleSpacing: 0,
           title: Text(
             'Settings',
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(fontSize: 12),
           ),
         ),
         body: SingleChildScrollView(
@@ -137,10 +141,8 @@ class _SettingsState extends State<Settings> {
                                 ),
                                 child: SvgPicture.asset(
                                   'assets/images/Icon awesome-clipboard-list.svg',
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.035,
-                                  height: MediaQuery.of(context).size.height *
-                                      0.035,
+                                  width:MediaQuery.of(context).size.width * 0.035,
+                                  height: MediaQuery.of(context).size.height * 0.035,
                                 ),
                               ),
                             ),
@@ -513,7 +515,13 @@ class _SettingsState extends State<Settings> {
               Padding(
                 padding: EdgeInsets.only(right: 15, left: 15),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Login(),
+                        ));
+                  },
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.09,
                     width: MediaQuery.of(context).size.width,

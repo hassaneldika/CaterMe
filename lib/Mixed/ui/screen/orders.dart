@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:caterme/HomePage/ui/screen/breakfast.dart';
-import 'package:caterme/HomePage/ui/screen/settings.dart';
+import 'package:caterme/Mixed/ui/screen/breakfast.dart';
+import 'package:caterme/Mixed/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -43,9 +43,10 @@ class _OrdersState extends State<Orders> {
           },
           icon: Icon(Icons.arrow_back),
         ),
+        titleSpacing: 0,
         title: Text(
           'Orders',
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 12),
         ),
       ),
       body: SingleChildScrollView(

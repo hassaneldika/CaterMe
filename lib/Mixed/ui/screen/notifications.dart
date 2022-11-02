@@ -38,9 +38,10 @@ class _NotificationsState extends State<Notifications> {
           },
           icon: Icon(Icons.arrow_back),
         ),
+        titleSpacing: 0,
         title: Text(
           'Notifications',
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 12),
         ),
       ),
       body: SingleChildScrollView(

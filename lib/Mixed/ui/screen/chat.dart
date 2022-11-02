@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:caterme/HomePage/ui/screen/settings.dart';
+import 'package:caterme/Mixed/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,9 +39,10 @@ class _ChatState extends State<Chat> {
           },
           icon: Icon(Icons.arrow_back),
         ),
+        titleSpacing: 0,
         title: Text(
           'Chat support',
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 12),
         ),
       ),
       body: SingleChildScrollView(
@@ -52,13 +53,13 @@ class _ChatState extends State<Chat> {
               child: Center(
                 child: Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(5.0),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left: 10, top: 5, right: 10, bottom: 5),
                     child: Text(
                       'Today',
-                      style: TextStyle(fontSize: 12),
+                      style: TextStyle(fontSize: 8),
                     ),
                   ),
                 ),

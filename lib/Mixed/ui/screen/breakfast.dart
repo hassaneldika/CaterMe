@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:caterme/HomePage/ui/screen/orders.dart';
+import 'package:caterme/Mixed/ui/screen/orders.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -43,9 +43,10 @@ class _BreakfastState extends State<Breakfast> {
           },
           icon: Icon(Icons.arrow_back),
         ),
+        titleSpacing: 0,
         title: Text(
           'Order details',
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 12),
         ),
       ),
       body: SingleChildScrollView(
@@ -413,13 +414,14 @@ class _BreakfastState extends State<Breakfast> {
                                   Row(
                                     children: [
                                       Container(
-                                        height: 30,
-                                        width: 30,
+                                        height: 20,
+                                        width: 20,
                                         child: FloatingActionButton(
                                           backgroundColor: Color.fromARGB(
                                               255, 255, 255, 255),
                                           onPressed: () {},
                                           child: Icon(
+                                            size:15,
                                             Icons.add,
                                             color: Color(0xff3E5521),
                                           ),
@@ -493,13 +495,14 @@ class _BreakfastState extends State<Breakfast> {
                                   Row(
                                     children: [
                                       Container(
-                                        height: 30,
-                                        width: 30,
+                                        height: 20,
+                                        width: 20,
                                         child: FloatingActionButton(
                                           backgroundColor: Color.fromARGB(
                                               255, 255, 255, 255),
                                           onPressed: () {},
                                           child: Icon(
+                                            size:15,
                                             Icons.add,
                                             color: Color(0xff3E5521),
                                           ),
@@ -573,13 +576,14 @@ class _BreakfastState extends State<Breakfast> {
                                   Row(
                                     children: [
                                       Container(
-                                        height: 30,
-                                        width: 30,
+                                        height: 20,
+                                        width: 20,
                                         child: FloatingActionButton(
                                           backgroundColor: Color.fromARGB(
                                               255, 255, 255, 255),
                                           onPressed: () {},
                                           child: Icon(
+                                            size:15,
                                             Icons.add,
                                             color: Color(0xff3E5521),
                                           ),

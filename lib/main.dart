@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:caterme/RegistrationPage/ui/screen/login.dart';
+import 'package:caterme/RegistrationPage/ui/widget/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {

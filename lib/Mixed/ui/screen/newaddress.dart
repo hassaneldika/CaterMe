@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-import 'package:caterme/HomePage/ui/screen/addresses.dart';
+import 'package:caterme/Mixed/ui/screen/addresses.dart';
 import 'package:caterme/HomePage/ui/screen/home.dart';
-import 'package:caterme/HomePage/ui/screen/settings.dart';
+import 'package:caterme/Mixed/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {

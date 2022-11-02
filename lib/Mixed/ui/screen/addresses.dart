@@ -3,7 +3,7 @@
 import 'dart:ui';
 
 import 'package:caterme/HomePage/ui/screen/home.dart';
-import 'package:caterme/HomePage/ui/screen/newaddress.dart';
+import 'package:caterme/Mixed/ui/screen/newaddress.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -42,9 +42,10 @@ class _AddressesState extends State<Addresses> {
           },
           icon: Icon(Icons.arrow_back),
         ),
+        titleSpacing: 0,
         title: Text(
           'Addresses',
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 12),
         ),
         actions: [
           IconButton(

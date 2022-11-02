@@ -3,7 +3,8 @@
 import 'dart:ui';
 
 import 'package:caterme/HomePage/ui/screen/home.dart';
-import 'package:caterme/HomePage/ui/screen/payment.dart';
+import 'package:caterme/HomePage/ui/widget/home.dart';
+import 'package:caterme/Mixed/ui/screen/payment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:table_calendar/table_calendar.dart';

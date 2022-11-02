@@ -1,6 +1,8 @@
 
 
-import 'package:caterme/HomePage/ui/screen/settings.dart';
+import 'dart:ui';
+
+import 'package:caterme/Mixed/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,7 +40,8 @@ class _FriendsState extends State<Friends> {
           },
           icon: Icon(Icons.arrow_back),
         ),
-        title: Text('Friends'),
+        titleSpacing: 0,
+        title: Text('Friends', style: TextStyle(fontSize: 12),),
         actions: [
           IconButton(
             onPressed: () {

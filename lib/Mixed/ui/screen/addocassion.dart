@@ -1,5 +1,5 @@
-import 'package:caterme/HomePage/ui/screen/occasion.dart';
-import 'package:caterme/HomePage/ui/screen/settings.dart';
+import 'package:caterme/Mixed/ui/screen/occasion.dart';
+import 'package:caterme/Mixed/ui/screen/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart'; 
 
